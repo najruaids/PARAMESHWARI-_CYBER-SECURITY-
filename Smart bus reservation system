@@ -1,0 +1,23 @@
+import java.util.*;
+class User {
+    String username;
+    String password;
+
+    User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+}
+class Bus {
+    int busId;
+    String source;
+    String destination;
+    int availableSeats;
+
+    Bus(int busId, String source, String destination, int seats) {
+        this.busId = busId;
+        this.source = source;
+        this.destination = destination;
+        this.availableSeats = seats;
+    }
+}
