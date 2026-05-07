@@ -1,23 +1,27 @@
-import java.util.*;
-class User {
-    String username;
-    String password;
-
-    User(String username, String password) {
-        this.username = username;
-        this.password = password;
+import java.util.Scanner;
+class seat{
+    int seatNumber;
+    String gender;
+    boolean booked;
+    seat(int seatNumber){
+        this.seatNumber=seatNumber;
+        this.booked=false;
+        this.gender="";
     }
 }
-class Bus {
-    int busId;
-    String source;
-    String destination;
-    int availableSeats;
-
-    Bus(int busId, String source, String destination, int seats) {
-        this.busId = busId;
-        this.source = source;
-        this.destination = destination;
-        this.availableSeats = seats;
+public class SmartBusReservation{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        seat seats[]=new seat[40];
+        for(int i=0;i<40;i++){
+            seats[i]=new seat(i+1);
+        }
+        seats[0].booked=true;
+        seats[0].gender="Male";
+        
+        seats[4].booked=true;
+        seats[4].gender="female";
+        
+        System.out.print("-------------SMART BUS RESERVATION-------------");
     }
 }
